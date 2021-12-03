@@ -11,27 +11,7 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import {url} from "inspector";
 
-const solutions = [
-    {
-        name: 'Inbox',
-        description: 'Get a better understanding of where your traffic is coming from.',
-        href: '#',
-        icon: InboxIcon,
-    },
-    {
-        name: 'Messaging',
-        description: 'Speak directly to your customers in a more meaningful way.',
-        href: '#',
-        icon: AnnotationIcon,
-    },
-    { name: 'Live Chat', description: "Your customers' data will be safe and secure.", href: '#', icon: ChatAlt2Icon },
-    {
-        name: 'Knowledge Base',
-        description: "Connect with third-party tools that you're already using.",
-        href: '#',
-        icon: QuestionMarkCircleIcon,
-    },
-]
+
 const navigation = [
     { name: 'TOKENS', href: '#' },
     { name: 'GRANTS', href: '#' },
@@ -39,6 +19,70 @@ const navigation = [
     { name: 'FAQ', href: '#' },
     { name: 'SUBSCRIBE', href: '#' },
     { name: 'CONTACT US', href: '#' },
+]
+const onetext=[
+    {
+        img:"https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-16-1536x740.png",
+        h1:"Purpose",
+        h2:"To fund the development of projects and applications that contribute to the Moonbeam ecosystem and promote overall network growth",
+
+
+    },
+    {
+        img:"https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-15-1536x740.png",
+        h1:"Mission",
+        h2:"To encourage passionate teams to build innovative, interconnected projects on Moonbeam and reward them projects that fulfill unaddressed use cases",
+
+    }
+
+]
+const twotext=[
+    {
+        img:"https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-16-1536x740.png",
+        h1:"Passion & Enthusiasm",
+        h2:"You’re excited about the potential of Moonbeam and Polkadot, and want to help build the ecosystems.",
+
+    },
+    {
+        img:"https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-15-1536x740.png",
+        h1:"Experimentation",
+        h2:"You want to build and test your application in a growing ecosystem with a strong community and a growing user base.",
+
+    },
+    {
+        img:"https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-15-1536x740.png",
+        h1:"Scalability",
+        h2:"ou want to build and test your application in a growing ecosystem with a strong community and a growing user base.",
+
+    },
+    {
+        img:"https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-15-1536x740.png",
+        h1:"Multi-Chain",
+        h2:"You want to build and test your application in a growing ecosystem with a strong community and a growing user base.",
+
+    },
+]
+const threetext=[
+    {
+        img:"https://tse3-mm.cn.bing.net/th/id/OIP-C.xOkhNOEyavPnz4EJSqwNcAAAAA?pid=ImgDet&rs=1",
+        h1:"NO.1",
+        h2:"",
+    },
+    {
+        img:"https://tse3-mm.cn.bing.net/th/id/OIP-C.xOkhNOEyavPnz4EJSqwNcAAAAA?pid=ImgDet&rs=1",
+        h1:"NO.2",
+        h2:"",
+    },
+    {
+        img:"https://tse3-mm.cn.bing.net/th/id/OIP-C.xOkhNOEyavPnz4EJSqwNcAAAAA?pid=ImgDet&rs=1",
+        h1:"NO.3",
+        h2:"",
+    },
+    {
+        img:"https://tse3-mm.cn.bing.net/th/id/OIP-C.xOkhNOEyavPnz4EJSqwNcAAAAA?pid=ImgDet&rs=1",
+        h1:"NO.4",
+        h2:"",
+    },
 ]
 
 function classNames(...classes) {
@@ -174,18 +218,14 @@ export default function Home() {
                                             <span className="block text-base md:text-lg text-black">Projects that add value to the Moonbeam ecosystem are eligible for funding opportunities. Learn how you can apply to be part of the first cohort of teams to participate in the Grants Program.</span>
                                         </h1>
                                        <div className="flex flex-wrap justify-between ">
-                                           <div className=" flex-col text-center m-5 w-80 ">
-                                               <img className="w-80 mx-auto"
-                                                    src="https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-16-1536x740.png" />
-                                               <h1 className="m-5 text-blue-500">Purpose</h1>
-                                               <h2 className="">To fund the development of projects and applications that contribute to the Moonbeam ecosystem and promote overall network growth<br></br></h2>
-                                           </div >
-                                           <div className="text-center  flex-col m-5 w-80  ">
-                                               <img className=" w-80 mx-auto  "
-                                                    src="https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-15-1536x740.png" alt=""/>
-                                               <h1 className="m-5 text-blue-500">Mission</h1>
-                                               <h2 className="">To encourage passionate teams to build innovative, interconnected projects on Moonbeam and reward them projects that fulfill unaddressed use cases</h2>
-                                           </div>
+                                           {onetext.map((item)=>(
+                                               <div key={item.h1} className=" flex-col text-center m-5 w-80 ">
+                                                   <img className="w-80 mx-auto"
+                                                        src={item.img} />
+                                                   <h1 className="m-5 text-blue-500">{item.h1}</h1>
+                                                   <h2 className="">{item.h2}</h2>
+                                               </div >
+                                           ))}
                                        </div>
                                         <div className="mt-10 max-w-sm mx-auto  text-center sm:max-w-none  sm:justify-center">
                                             <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid  sm:gap-5">
@@ -209,30 +249,13 @@ export default function Home() {
                                         <span className="block font-extrabold  mb-5 md:mb-10">Why You Should Apply</span>
                                     </h1>
                                     <div className="flex flex-wrap justify-center md:justify-between ">
-                                        <div className=" flex-col text-center w-80 md:w-60 ">
+                                        {twotext.map((item)=>(
+                                        <div key={item.h1} className=" flex-col text-center w-80 md:w-60 ">
                                             <img className="w-80 md:w-60  mx-auto"
-                                                 src="https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-16-1536x740.png" />
-                                            <h1 className="m-5 text-blue-500">Passion & Enthusiasm</h1>
-                                            <h2 className="">You’re excited about the potential of Moonbeam and Polkadot, and want to help build the ecosystems.<br></br></h2>
-                                        </div >
-                                        <div className="text-center  flex-col w-80 md:w-60  ">
-                                            <img className="w-80 md:w-60 mx-auto  "
-                                                 src="https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-15-1536x740.png" alt=""/>
-                                            <h1 className="m-5 text-blue-500">Experimentation</h1>
-                                            <h2 className="">You want to build and test your application in a growing ecosystem with a strong community and a growing user base.</h2>
-                                        </div>
-                                        <div className="text-center  flex-col  w-80 md:w-60  ">
-                                            <img className=" w-80 md:w-60 mx-auto  "
-                                                 src="https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-15-1536x740.png" alt=""/>
-                                            <h1 className="m-5 text-blue-500">Scalability</h1>
-                                            <h2 className="">You want to build and test your application in a growing ecosystem with a strong community and a growing user base.</h2>
-                                        </div>
-                                        <div className="text-center  flex-col w-80 md:w-60  ">
-                                            <img className="w-80 md:w-60mx-auto  "
-                                                 src="https://moonbeam.foundation/wp-content/uploads/2021/02/Glimmer-Token-Allocation-Launch-15-1536x740.png" alt=""/>
-                                            <h1 className="m-5 text-blue-500">Multi-Chain</h1>
-                                            <h2 className="">You want to build and test your application in a growing ecosystem with a strong community and a growing user base.</h2>
-                                        </div>
+                                                 src={item.img} />
+                                            <h1 className="m-5 text-blue-500"></h1>
+                                            <h2 className=""></h2>
+                                        </div >))}
                                     </div>
                                 </div>
                             </div>
@@ -250,37 +273,15 @@ export default function Home() {
                                         </span>
                                     </h1>
                                     <div className=" flex flex-wrap  justify-center md:justify-between pt-5 " >
-                                        <div className="relative  w-80 h-72 md:w-72  mb-14 transform duration-700 hover:shadow-2xl hover:-translate-y-3  ">
+                                        {threetext.map((item)=>(
+                                        <div key={item.h1} className="relative  w-80 h-72 md:w-72  mb-14 transform duration-700 hover:shadow-2xl hover:-translate-y-3  ">
                                             <img className="absolute  w-80 mx-auto"
-                                                 src="https://tse3-mm.cn.bing.net/th/id/OIP-C.xOkhNOEyavPnz4EJSqwNcAAAAA?pid=ImgDet&rs=1" />
+                                                 src={item.img} />
                                             <div>
-                                                <h1 className=" relative m-5 text-blue-500">NO.1</h1>
+                                                <h1 className=" relative m-5 text-blue-500">{item.h1}</h1>
+                                                <h2>{item.h2} </h2>
                                             </div>
-                                        </div >
-                                        <div className="relative w-80 h-72 md:w-72 mb-14  transform duration-700 hover:shadow-2xl hover:-translate-y-3 ">
-                                            <img className="absolute w-80   mx-auto"
-                                                 src="https://tse3-mm.cn.bing.net/th/id/OIP-C.xOkhNOEyavPnz4EJSqwNcAAAAA?pid=ImgDet&rs=1" />
-                                            <div className="relative  m-5 text-blue-500">
-                                                <h1 className=" ">NO.2</h1>
-                                            <div className="  ">
-                                                Glimmer token grants for community projects
-                                            </div>
-                                            </div>
-                                        </div >
-                                        <div className="relative w-80 h-72 md:w-72  mb-14 transform duration-700 hover:shadow-2xl hover:-translate-y-3 ">
-                                            <img className="absolute w-80   mx-auto"
-                                                 src="https://tse3-mm.cn.bing.net/th/id/OIP-C.xOkhNOEyavPnz4EJSqwNcAAAAA?pid=ImgDet&rs=1" />
-                                            <div>
-                                                <h1 className=" relative m-5 text-blue-500">NO.3</h1>
-                                            </div>
-                                        </div >
-                                        <div className="relative w-80 h-72 md:w-72   transform duration-700 hover:shadow-2xl hover:-translate-y-3 ">
-                                            <img className="absolute  w-80    mx-auto"
-                                                 src="https://tse3-mm.cn.bing.net/th/id/OIP-C.xOkhNOEyavPnz4EJSqwNcAAAAA?pid=ImgDet&rs=1" />
-                                            <div>
-                                                <h1 className=" relative m-5 text-blue-500">NO.4</h1>
-                                            </div>
-                                        </div >
+                                        </div >))}
                                     </div>
                                 </div>
                             </div>
