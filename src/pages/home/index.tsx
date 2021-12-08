@@ -253,8 +253,8 @@ export default function Home() {
                                         <div key={item.h1} className=" flex-col text-center w-80 md:w-60 ">
                                             <img className="w-80 md:w-60  mx-auto"
                                                  src={item.img} />
-                                            <h1 className="m-5 text-blue-500"></h1>
-                                            <h2 className=""></h2>
+                                            <h1 className="m-5 text-blue-500">{item.h1}</h1>
+                                            <h2 className="">{item.h2}</h2>
                                         </div >))}
                                     </div>
                                 </div>
